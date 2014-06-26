@@ -1,0 +1,84 @@
+﻿@{
+    ViewBag.Title = "TeacherNotFound";
+    Layout = "~/Views/Shared/MyLayout.cshtml";
+}
+
+
+
+
+
+<!DOCTYPE HTML>
+<html>
+<head>
+
+    @section title
+    {
+        <title>Easy Course Registration System | TeacherNotFound</title>
+    }
+<!-- start plugins -->
+        
+
+</head>
+<body>
+
+   
+    @section menubuttons{
+            <div class="header_bg">
+                    <div class="container">
+	                    <div class="header">
+		                    <div class="logo">
+			                    <a href="../Home/Index"><img src="../images/pucit_logo.png" alt=""/></a>
+		                    </div>
+		                    <div class="h_menu">
+		                    <a id="touch-menu" class="mobile-menu" href="#">Menu</a>
+		                    <nav>
+		                    <ul class="menu list-unstyled">
+			                    <li class="activate"><a href="~/Home/Index">HOME</a></li>
+			                    
+			                    
+			                    <li><a href="#">Reports</a>
+			                    <ul class="sub-menu list-unstyled">
+				                    <li><a href="#">Course</a>
+                                        <ul class="list-unstyled">
+						                    <li><a href="~/Home/ViewReport">Students Enrolled</a></li>
+                                            <li class="activate"><a href="~/Course/ViewCourses">All Courses</a></li>
+						                    
+						                    
+					                    </ul>
+                                    </li>
+				                    <li><a href="#">Student</a>
+
+                                        <ul class="list-unstyled">
+						                    
+						                    <li><a href="~/Home/ViewReport">Status</a></li>
+                                            <li><a href="~/Home/ViewReport">Enrolled Courses</a></li>
+						                    
+					                    </ul>
+
+				                    </li>
+				                    <li><a href="#">Teacher</a>
+					                    <ul class="list-unstyled">
+						                    <li><a href="~/Home/ViewReport">Teaching Courses</a></li>
+						                    
+					                    </ul>
+				                    </li>
+			                    </ul>
+			                    </li>
+			                    
+                                <li ><a href="~/Home/Index">LOGOUT</a></li>
+                                
+			                    
+			                    <li><a href="~/Home/Contact">CONTACT</a></li>
+		                    </ul>
+		                    </nav>
+		                 
+		                    </div>
+		                    <div class="clearfix"></div>
+	                    </div>
+                    </div>
+                    </div>
+		                  
+        }
+    <center><h2 text-align="center">Sorry!<br> Teacher is not Available For this Course yet.   <br><br><br><br><br><br><br><br></h2></center>
+</body>
+</html>
