@@ -3,7 +3,6 @@
     Layout = "~/Views/Shared/UALogin.cshtml";
 }
 
-
 @model List<MySliderProject.Models.Student>
 
     @section title
@@ -27,7 +26,7 @@
                        <td align="center"><font color="blue" size="5">UserName</font></td>
                        <td align="center"><font color="blue" size="5">Password</font></td>                       
                        <td align="center"><font color="blue" size="5">SignUpStatus</font></td>
-                       <td align="center"><font color="blue" size="5">Update</font></td>
+                       
 
                    </tr>
                    @foreach (var stdu in Model){
@@ -39,11 +38,7 @@
                        <td  align="center"><font color="red" size="5">@stdu.UName</font></td>
                        <td  align="center"><font color="red" size="5">@stdu.Password</font></td>                       
                        <td  align="center"><font color="red" size="5">@stdu.Status</font></td>
-                       <div class="read_btn">                         
-                           
-                           <td><a href="~/Admin/ShowUpdate/@stdu.RegId" class="btn">Update</a></td>
-                           
-				       </div>	
+                     
 
                    </tr>
 

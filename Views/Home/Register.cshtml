@@ -1,38 +1,17 @@
 ﻿@{
     ViewBag.Title = "Register";
-    Layout = "~/Views/Shared/MyLayout.cshtml";
+    Layout = "~/Views/Shared/BeforeLogin.cshtml";
 }
 
 @model MySliderProject.Models.Student
-<!DOCTYPE HTML>
-<html>
-<head>
+
     @section title
     {
         <title>Easy Course Registration System | Register</title>
     }
 
 
-    @section myscript
-    {
-        @Styles.Render("~/Content/bootstrap.css")
-        @Styles.Render("~/Content/bootstrap.min.css")
-          @Scripts.Render("~/bundles/jqueryval")
-        @Scripts.Render("~/Scripts/bootstrap.js")
-        @Scripts.Render("~/Scripts/bootstrap.min.js")
-        
-
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-
-        <link href="../Content/blue.css" rel="stylesheet" type="text/css" media="all" />
-        <!----font-Awesome----->
-   	        <link rel="stylesheet" href="../fonts/css/font-awesome.min.css">
-        <!----font-Awesome----->
-        <script type="text/javascript" src="../Scripts/jquery.min.js"></script>
-        <script src="../Scripts/menu.js" type="text/javascript"></script>       
-    }
+  
     <script>
         $(document).ready(function () {
 
@@ -52,7 +31,11 @@
                        $('#res').text("Student Exists  " );//+ data.Name);
                        $('#RollNo').val(data.RollNo);
                        $('#Name').val(data.Name);
-                        $('#Batch').val(data.Batch);
+                       $('#Batch').val(data.Batch);
+                       $('#UName').val(data.UName);
+                       $('#Password').val(data.Password);
+                       $('#CPassword').val(data.Password);
+
                     }
                     else
                     {
@@ -65,136 +48,7 @@
         });
 
     </script>
-
-</head>
-<body>
-
-
-
-
-    @section menubuttons{
-            <div class="header_bg">
-                    <div class="container">
-	                    <div class="header">
-		                    <div class="logo">
-			                    <a href="../Home/Index"><img src="../images/pucit_logo.png" alt=""/></a>
-		                    </div>
-		                    <div class="h_menu">
-		                    <a id="touch-menu" class="mobile-menu" href="#">Menu</a>
-		                    <nav>
-		                    <ul class="menu list-unstyled">
-			                    <li ><a href="~/Home/Index">HOME</a></li>
-			                    
-			                    
-			                    @*<li><a href="#">Reports</a>
-			                    <ul class="sub-menu list-unstyled">
-				                    <li><a href="#">Course</a>
-                                        <ul class="list-unstyled">
-						                    <li><a href="~/Home/ViewReport">Students Enrolled</a></li>
-                                            <li class="activate"><a href="~/Course/ViewCourses">All Courses</a></li>
-						                    
-						                    
-					                    </ul>
-                                    </li>
-				                    <li><a href="#">Student</a>
-
-                                        <ul class="list-unstyled">
-						                    
-						                    <li><a href="~/Home/ViewReport">Status</a></li>
-                                            <li><a href="~/Home/ViewReport">Enrolled Courses</a></li>
-						                    
-					                    </ul>
-
-				                    </li>
-				                    <li><a href="#">Teacher</a>
-					                    <ul class="list-unstyled">
-						                    <li><a href="~/Home/ViewReport">Teaching Courses</a></li>
-						                    
-					                    </ul>
-				                    </li>
-			                    </ul>
-			                    </li>*@
-			                    
-                                <li class="activate"><a href="~/Home/Register">Register</a></li>
-                                <li ><a href="~/Home/Login">LOGIN</a></li>
-                                
-			                    
-			                    <li><a href="~/Home/Contact">CONTACT</a></li>
-		                    </ul>
-		                    </nav>
-		                    <script src="~/Scripts/menu.js" type="text/javascript"></script>
-		                    </div>
-		                    <div class="clearfix"></div>
-	                    </div>
-                    </div>
-                    </div>
-		                  
-        }
-
-
-
-
-
-
-
-@*@section menubuttons{
-                    <div class="header_bg">
-                    <div class="container">
-	                    <div class="header">
-		                    <div class="logo">
-			                    <a href="../Home/Index"><img src="../images/pucit_logo.png" alt=""/></a>
-		                    </div>
-		                    <div class="h_menu">
-		                    <a id="touch-menu" class="mobile-menu" href="#">Menu</a>
-		                    <nav>
-		                    <ul class="menu list-unstyled">
-			                    <li ><a href="../Home/Index">HOME</a></li>
-			                    <li><a href="about.html">ABOUT</a></li>
-			                    <li><a href="service.html">services</a></li>
-			                    <li><a href="#">Reports</a>
-			                    <ul class="sub-menu list-unstyled">
-				                    <li><a href="#">Course</a>
-                                        <ul class="list-unstyled">
-						                    <li><a href="~/Home/ViewReport">Students Enrolled</a></li>
-                                            <li ><a href="~/Home/ViewCourses">All Courses</a></li>
-						                    
-						                    
-					                    </ul>
-                                    </li>
-				                    <li><a href="#">Student</a>
-
-                                        <ul class="list-unstyled">
-						                    
-						                    <li><a href="~/Home/ViewReport">Status</a></li>
-                                            <li><a href="~/Home/ViewReport">Enrolled Courses</a></li>
-						                    
-					                    </ul>
-
-				                    </li>
-				                    <li><a href="#">Teacher</a>
-					                    <ul class="list-unstyled">
-						                    <li><a href="~/Home/ViewReport">Teaching Courses</a></li>
-						                    
-					                    </ul>
-				                    </li>
-			                    </ul>
-			                    </li>
-			                    <li><a href="blog.html">BLOG</a></li>
-                                <li class="activate"><a href="../Home/Register">Register</a></li>
-                                <li><a href="../Home/Login">LOGIN</a></li>
-                                
-			                    <li><a href="feature.html">feature</a></li>
-			                    <li><a href="../Home/Contact">CONTACT</a></li>
-		                    </ul>
-		                    </nav>
-		                    <script src="../Scripts/menu.js" type="text/javascript"></script>
-		                    </div>
-		                    <div class="clearfix"></div>
-	                    </div>
-                    </div>
-                    </div>
-        }*@
-
+    
 
 <div class="main_btm1"><!-- start main_btm -->
 <div class="container">
@@ -263,7 +117,7 @@
                                  
         
                                     <div class="editor-label">
-<h4>                                        @Html.LabelFor((User=>User.CPassword))</h4>
+                                        <h4>@Html.LabelFor((User=>User.CPassword))</h4>
                                     </div>
                                     <div class="editor-feild">
                                         @Html.EditorFor((User=>User.CPassword))
@@ -274,18 +128,6 @@
                                       <input type="submit" value="Register" />
 
                                     }
-
-                            @*<input type="text" id="RegNo" PlaceHolder="registration number" required="required" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Reg#';}">
-                            <input type="text" PlaceHolder="roll number" required="required" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Roll Number';}">
-							<input type="text" PlaceHolder="Name" required="required" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}">
-                            <input type="text" PlaceHolder="CNIC#" required="required" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'CNIC#';}">
-                            <input type="text" PlaceHolder="Degree" required="required" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Degree';}">
-							<input type="text" PlaceHolder="Password" required="required" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}">
-							*@
-
-                            
-							@*<span><input type="submit" value="Register"></span>*@
-						@*</form>*@
 				    </div>
   			</div>		
   			<div class="clearfix"></div>		
@@ -293,5 +135,7 @@
 	</div>
 </div>
 </div>
-</body>
-</html>
+
+ <script>
+    @Scripts.Render("~/bundles/jqueryval")
+ </script>

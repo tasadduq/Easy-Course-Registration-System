@@ -1,45 +1,14 @@
 ﻿@{
-    Layout = "../Shared/MyLayout.cshtml";
+    Layout = "~/Views/Shared/ABeforeLogin.cshtml";
     }
 
 @model MySliderProject.Models.Admin
-<!DOCTYPE HTML>
-<html>
-<head>
+
     @section title
     {
         <title>Easy Course Registration System | Login</title>
     }
 
-
-   
-</head>
-<body>
-
-@section menubuttons{
-            <div class="header_bg">
-                    <div class="container">
-	                    <div class="header">
-		                    <div class="logo">
-			                    <a href="../Home/Index"><img src="../images/pucit_logo.png" alt=""/></a>
-		                    </div>
-		                    <div class="h_menu">
-		                    <a id="touch-menu" class="mobile-menu" href="#">Menu</a>
-		                    <nav>
-		                    <ul class="menu list-unstyled">
-			                    <li ><a href="~/Admin/Index">HOME</a></li>
-			                    <li class="activate"><a href="~/Admin/Login">LOGIN</a></li>
-                               
-		                    </ul>
-		                    </nav>
-		                    
-		                    </div>
-		                    <div class="clearfix"></div>
-	                    </div>
-                    </div>
-                    </div>
-		                  
-        }
 
 
 <div class="main_btm1"><!-- start main_btm -->
@@ -77,12 +46,7 @@
                                  </div>
                                  <span><input type="submit" value="Login"></span>
                              }
-                    @*        <input type="text" PlaceHolder="UserName" required="required" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'UserName';}">
-							
-							<input type="text" PlaceHolder="Password" required="required" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '*********';}">
-							
-							<span><input type="submit" value="Login"></span>
-						</form>*@
+                   
 				    </div>
   			</div>		
   			<div class="clearfix"></div>		
@@ -90,5 +54,7 @@
 	</div>
 </div>
 </div>
-</body>
-</html>
+
+ <script>
+    @Scripts.Render("~/bundles/jqueryval")
+ </script>
