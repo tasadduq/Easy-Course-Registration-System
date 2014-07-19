@@ -1,0 +1,37 @@
+﻿@model IEnumerable<MySliderProject.Models.Teacher>
+
+@{
+    ViewBag.Title = "GetAllTeachers";
+    Layout = "~/Views/Shared/AALogin.cshtml";
+}
+
+<h2>AllTeachers</h2>
+<div class="main_btm1"><!-- start main_btm -->
+    <div class="container">
+	    <div class="technology">
+		    <div class="technology_main">
+                @foreach(var t in Model)
+                {
+			    <div class="technology_list col-md-6">
+                    <br><h4> Name : @t.Name</h4><br>
+                    <h4>Teacher ID : @t.TId</h4>
+                    <h4>Course ID : @t.CId</h4>                    
+				    <div class="tech_para">
+                        <h4>Designation : @t.Designation</h4>
+                        <h4>Qualification : @t.Qualification</h4>    
+                        <h4>Address : @t.Address</h4>
+				    </div>
+                    
+                    
+				    <div class="clearfix"></div>
+				    <div class="read_btn">
+                        <a href="~/Teacher/Update/@t.TId" class="btn">Update</a>
+                        <a href="~/Teacher/Delete/@t.TId" class="btn">Delete</a>
+				    </div>	
+			    </div>
+                }
+	    </div>
+    </div>
+</div>
+
+</div>

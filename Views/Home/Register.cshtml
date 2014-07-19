@@ -13,29 +13,28 @@
 
   
     <script>
-        $(document).ready(function () {
+        $(document).ready(function ()
+        {
 
             $('#checking').hide();
            
-                $('#RegId').blur(function () {
-                //console.log("inside click");
-               // $('#checking').show();
+            $('#RegId').blur(function ()
+            {
                 var reg = $('#RegId').val();
                 $('#checking').show();
-                $.getJSON("/Home/CheckReg?RegId="+reg, function (data) {
+                $.getJSON("/Home/CheckReg?RegId=" + reg, function (data)
+                {
                   
-                    console.log("data" + data);
-
                     $('#checking').hide();
-                    if (data) {
-                       $('#res').text("Student Exists  " );//+ data.Name);
+                    if (data)
+                    {
+                       $('#res').text("Student Exists  " + data.Name);//+ data.Name);
                        $('#RollNo').val(data.RollNo);
                        $('#Name').val(data.Name);
                        $('#Batch').val(data.Batch);
                        $('#UName').val(data.UName);
                        $('#Password').val(data.Password);
                        $('#CPassword').val(data.Password);
-
                     }
                     else
                     {
@@ -59,7 +58,7 @@
 				<div class="col-md-8">
 				  <div class="contact-form">
 				  	<h2><b>Register Yourself</b></h2>
-						@*<form method="post" action="../Home/Index">*@
+						
                          @using (Html.BeginForm("SaveStudent","Home",FormMethod.Post) )   {
                              
                             
@@ -69,7 +68,7 @@
                                     <h4>@Html.LabelFor((User=>User.RegId))</h4>
                                     </div>
                                     <div class="editor-feild">
-                                        @Html.EditorFor((User=>User.RegId))
+                                        @Html.TextBoxFor((User=>User.RegId))
                                         @Html.ValidationMessageFor(u=>u.RegId)
                                         
                                     </div>    
@@ -110,7 +109,7 @@
                                         <h4>@Html.LabelFor((User=>User.Password))</h4>
                                     </div>
                                     <div class="editor-feild">
-                                        @Html.EditorFor((User=>User.Password))
+                                        @Html.TextBoxFor((User=>User.Password))
                                         @Html.ValidationMessageFor(u=>u.Password)
                                     </div>    
                                    
@@ -120,7 +119,7 @@
                                         <h4>@Html.LabelFor((User=>User.CPassword))</h4>
                                     </div>
                                     <div class="editor-feild">
-                                        @Html.EditorFor((User=>User.CPassword))
+                                        @Html.TextBoxFor(User=>User.CPassword)
                                         @Html.ValidationMessageFor(u=>u.CPassword)
                                     </div>    
         

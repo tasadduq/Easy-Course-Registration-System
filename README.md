@@ -1,2 +1,0 @@
-Easy-Course-Registration-System
-===============================
